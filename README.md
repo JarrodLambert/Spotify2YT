@@ -80,8 +80,7 @@
 
 - **Initialize YouTube Music API:**
 
-  - Loads authenticated headers from `headers_auth.json`.
-  - Creates an instance of `YTMusic` for API calls.
+  - Creates an instance of `YTMusic` for API calls using `Oauth`.
 
 - **Create YouTube Music Playlist:**
 
@@ -102,14 +101,5 @@
 
 ## Notes
 
-- **Rate Limits:** The script includes a delay (`time.sleep(1)`) between API calls to avoid hitting rate limits.
-- **Accuracy:** Search results may not always match perfectly due to differences in song titles or availability on YouTube Music.
-- **Privacy:** Keep your authentication files (`headers_auth.json`, `headers_raw.txt`) secure, as they contain sensitive information.
+- **Privacy:** Keep your authentication information secure, it is sensitive information.
 
----
-
-## Conclusion
-
-This script automates the process of transferring a Spotify playlist to YouTube Music. By following the setup instructions carefully, you can customize and run the script to migrate your playlists seamlessly.
-
-If you have any questions or need further assistance, feel free to ask!
