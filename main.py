@@ -2,6 +2,11 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from ytmusicapi import YTMusic
 import time
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 def get_spotify_playlist_tracks(sp, playlist_id):
     tracks = []
@@ -20,9 +25,9 @@ def get_spotify_playlist_tracks(sp, playlist_id):
     return tracks
 
 def main():
-    # Replace these with your Spotify app credentials
-    SPOTIFY_CLIENT_ID = 'you_spotify_client_id'
-    SPOTIFY_CLIENT_SECRET = 'you_spotify_client_secret'
+    # Retrieve Spotify credentials from environment variables
+    SPOTIFY_CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
+    SPOTIFY_CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
     SPOTIFY_REDIRECT_URI = 'http://localhost:8888/callback'
 
     # Replace with your Spotify playlist ID
