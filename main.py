@@ -28,10 +28,9 @@ def main():
     # Retrieve Spotify credentials from environment variables
     SPOTIFY_CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
     SPOTIFY_CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
-    SPOTIFY_REDIRECT_URI = 'http://localhost:8888/callback'
-
+    SPOTIFY_REDIRECT_URI = os.getenv('SPOTIFY_REDIRECT_URI')
     # Replace with your Spotify playlist ID
-    SPOTIFY_PLAYLIST_ID = 'you_spotify_playlist_id'
+    SPOTIFY_PLAYLIST_ID = os.getenv('SPOTIFY_PLAYLIST_ID')
 
     # Spotify authentication
     sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
@@ -50,7 +49,7 @@ def main():
     ytmusic = YTMusic('oauth.json')
 
     # Create a new YouTube Music playlist
-    playlist_name = 'Your Playlist Name'  # Replace with your desired playlist name
+    playlist_name = 'Accent Heavy'  # Replace with your desired playlist name
     playlist_description = 'Created from Spotify playlist'
     privacy_status = 'PRIVATE'  # Choose 'PRIVATE', 'PUBLIC', or 'UNLISTED'
     print("Creating YouTube Music playlist...")

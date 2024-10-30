@@ -32,7 +32,7 @@
    - Open Spotify and navigate to the playlist you want to convert.
    - Click on the three dots (**...**) next to the playlist name.
    - Select **"Share" > "Copy Link to Playlist"**.
-   - The link will look like `https://open.spotify.com/playlist/PLAYLIST_ID`.
+   - The link will look like `https://open.spotify.com/playlist/PLAYLIST_ID?...`.
    - Extract the `PLAYLIST_ID` from the URL and replace it in the script:
 
      ```python
